@@ -91,17 +91,25 @@ a:visited {
   text-align: center;
 }
 
-[class*='col-'] {
-  padding-bottom: 30px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+[class*='col-'] {
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 
   background-color: gray;
+}
+
+[class*='col-'] div {
+  /*flex: 1;*/
+  height: 200px;
 }
 
 [class*='col-']:last-of-type {
@@ -160,7 +168,6 @@ body {
     border-top: 0px;
     border-bottom: none;
     flex-grow: 1;
-    padding-bottom: 30px;
     margin-bottom: 0;
   }
 
